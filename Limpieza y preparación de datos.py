@@ -11,9 +11,9 @@ def procesar_datos(dataframe):
         print("Se eliminaron las filas duplicadas.")
     # Detección y eliminación de valores atípicos (agrega tu lógica aquí)
     # Verificar si la columna 'Edad' existe en el DataFrame
-    if 'age' in dataframe.columns:
+    if 'edad' in dataframe.columns:
         # Crear columna de categoría de edades
-        dataframe['Categoria edad'] = pd.cut(dataframe['age'], bins=[0, 12, 19, 39, 59, float('inf')], labels=['Niño', 'Adolescente', 'Joven Adulto', 'Adulto', 'Adulto Mayor'])
+        dataframe['Categoria edad'] = pd.cut(dataframe['edad'], bins=[0, 12, 19, 39, 59, float('inf')], labels=['Niño', 'Adolescente', 'Joven Adulto', 'Adulto', 'Adulto Mayor'])
         print("Se creó la columna 'Categoria Edad'.")
     else:
         print("La columna 'Edad' no existe en el DataFrame.")
